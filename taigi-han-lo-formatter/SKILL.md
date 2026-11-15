@@ -36,6 +36,8 @@ Han-Lo (Hàn-Lô) mixes Hanji (漢字) with Roman Orthography (POJ or KPL). Pure
     - DELETE the hyphen between Hanji and Roman Orthography: `台灣-ê` → `台灣ê`
     - KEEP the space between two Roman words: `chin hó`
     - KEEP the hyphen inside a Roman word: `chin-chiàⁿ`
+    - KEEP the neutral-tone (khin-siaⁿ) marker `--` and every hyphen in the neutral-tone word that follows it, even between Hanji: `tin--落-來`, `看--起-來` (not `落來` / `起來`). The `--` marks every syllable after it as neutral-tone, and the inner hyphen shows they belong together.
+    - DELETE a space after `--`: `hó-sńg-- eh` → `hó-sńg--eh`
 13. **Full-width punctuation** in Han-Lo lines: `, . ? ! : ; ( )` → `，。？！：；（）`.
 
 ## Protecting non-Taigi tokens before normalizing
