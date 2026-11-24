@@ -1,6 +1,6 @@
 # PehoejiSkills
 
-Twelve agent skills for Pe̍h-ōe-jī font engineering, Taigi language processing, and document publishing. The nine language and publishing skills come from [Taigibun Agent Skills](https://github.com/Taigibun/taigibun-agent-skills).
+Twelve agent skills for POJ font engineering, Taigi language processing, and document publishing. The nine language and publishing skills come from [Taigibun Agent Skills](https://github.com/Taigibun/taigibun-agent-skills).
 
 ## Skills Included
 
