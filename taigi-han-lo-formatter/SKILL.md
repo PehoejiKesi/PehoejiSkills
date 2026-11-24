@@ -1,6 +1,6 @@
 ---
 name: taigi-han-lo-formatter
-description: Normalizes mixed Hanji + Roman Orthography (Han-Lo) Taigi text: tone-mark placement, diacritic repair, spacing and hyphen rules next to Hanji, full-width punctuation, and protection of English words, abbreviations and decimal points from the normalizer. Use whenever Taigi text has wrong spaces or hyphens beside Hanji, half-width punctuation in Han-Lo sentences, misplaced or duplicated tone marks, or when calling the KonvertToPoj normalizePoj* methods on real documents.
+description: "Normalizes mixed Hanji + Roman Orthography (Han-Lo) Taigi text: tone-mark placement, diacritic repair, spacing and hyphen rules next to Hanji, full-width punctuation, and protection of English words, abbreviations and decimal points from the normalizer. Use whenever Taigi text has wrong spaces or hyphens beside Hanji, half-width punctuation in Han-Lo sentences, misplaced or duplicated tone marks, or when calling the KonvertToPoj normalizePoj* methods on real documents."
 ---
 
 # Taigi Han-Lo Formatter

@@ -1,8 +1,14 @@
-# Taigibun Agent Skills
+# PehoejiSkills
 
-This repository contains a specialized suite of agent skills for Taigi language processing, literature digitization and professional typography. These skills turn general AI agents (Claude, Gemini, etc.) into Taigi-expert assistants.
+Twelve agent skills for Pe̍h-ōe-jī font engineering, Taigi language processing, and document publishing. The nine language and publishing skills come from [Taigibun Agent Skills](https://github.com/Taigibun/taigibun-agent-skills).
 
 ## Skills Included
+
+### POJ font engineering
+
+* [poj-mark-design](.agents/skills/poj-mark-design/SKILL.md) guides the design and attachment of tone marks, dotted o and superscript nasal forms.
+* [poj-shaping-audit](.agents/skills/poj-shaping-audit/SKILL.md) checks normalization, positioning and fallback in built fonts. Its example commands use the [PehoejiFont tools](https://github.com/PehoejiFont/PehoejiFont.github.io/tree/main/tools).
+* [poj-webfont-subsetting](.agents/skills/poj-webfont-subsetting/SKILL.md) tracks missing or misplaced marks through WOFF2 subsetting and browser font selection.
 
 ### Pipeline
 *   **taigi-doc-pipeline**: The end-to-end orchestrator. Legacy Word `.doc` → fixed Unicode text → structured Markdown → GenYoMin2 TW `.docx` → outlined PDF, with the `NN_<title>_<descriptor>` naming convention, all five stage scripts, the stage-2 Kotlin fixer, and notes on what `textutil` does to old Word files.
@@ -23,105 +29,28 @@ This repository contains a specialized suite of agent skills for Taigi language 
 
 ## Installation
 
-### Claude (Claude Code)
+Clone the collection and open it as your workspace.
 
-#### Option 1: Plugin Install (Recommended)
-
-Install the entire skill suite as a plugin directly from the repository:
-```bash
-/plugin install https://github.com/Taigibun/taigibun-agent-skills
+```sh
+git clone https://github.com/PehoejiKesi/PehoejiSkills.git
+cd PehoejiSkills
 ```
 
-Skills are namespaced automatically (e.g., `/taigibun-agent-skills:taigi-roman-orthography-converter`). To update:
-```bash
-/plugin update taigibun-agent-skills
+Codex and Antigravity discover the skills in `.agents/skills/`. Claude Code discovers them in `.claude/skills/`. For example, invoke `$poj-mark-design` in Codex or `/poj-mark-design` in Claude Code and Antigravity.
+
+To use an individual skill in another project, copy its entire directory, following links so that scripts, references and assets travel with it. For example, from that project's root, with PehoejiSkills cloned alongside it:
+
+```sh
+mkdir -p .agents/skills .claude/skills
+cp -RL ../PehoejiSkills/.agents/skills/taigi-doc-pipeline .agents/skills/
+ln -s ../../.agents/skills/taigi-doc-pipeline .claude/skills/taigi-doc-pipeline
 ```
 
-#### Option 2: User-Level (Global)
+For Gemini CLI, install an individual skill from the local clone, for example:
 
-Install individual skills for all projects by copying them into your home directory:
-```bash
-cp -r taigi-roman-orthography-converter/ ~/.claude/skills/taigi-roman-orthography-converter/
-```
-
-#### Option 3: Project-Level
-
-Install individual skills for a specific project by copying them into the project directory:
-```bash
-cp -r taigi-roman-orthography-converter/ .claude/skills/taigi-roman-orthography-converter/
-```
-
-#### Option 4: CLI Flags (Development / Testing)
-
-Load the plugin from a local directory or remote archive without installing:
-```bash
-claude --plugin-dir ./taigibun-agent-skills
-claude --plugin-url https://example.com/taigibun-agent-skills.zip
-```
-
-For Options 2 and 3, you can optionally reference the skills in your `CLAUDE.md`:
-```markdown
-I have Taigi language skills in `.claude/skills/`.
-Always refer to these for translation, Roman Orthography, or typesetting tasks.
-```
-
-### Gemini CLI
-
-#### Option 1: Install from Git (Recommended)
-
-Install the entire skill suite directly from the repository:
-```bash
-gemini skills install https://github.com/Taigibun/taigibun-agent-skills.git --scope user
-```
-
-Install a single skill from the repo using `--path`:
-```bash
-gemini skills install https://github.com/Taigibun/taigibun-agent-skills.git --path taigi-roman-orthography-converter --scope user
-```
-
-Use `--scope workspace` instead of `--scope user` to install for the current project only (stored in `.gemini/skills/`).
-
-#### Option 2: Install from Local Directory
-
-After cloning the repository:
-```bash
+```sh
 gemini skills install ./taigi-roman-orthography-converter --scope user
 ```
-
-#### Option 3: Symlink for Development
-
-For active skill development, use `link` so changes are reflected immediately:
-```bash
-gemini skills link ./taigi-roman-orthography-converter --scope user
-```
-
-#### Option 4: Manual Placement
-
-Copy skill directories directly to the Gemini skills directory:
-```bash
-cp -r taigi-roman-orthography-converter/ ~/.gemini/skills/taigi-roman-orthography-converter/
-```
-
-After any installation method, reload skills in your session:
-```
-/skills reload
-```
-
-### Cross-Agent Install
-
-This project follows the open [Agent Skills](https://agentskills.io) standard (`SKILL.md`). You can use the cross-agent skills CLI to install for multiple agents at once.
-
-**Global** (available in all projects — installs to `~/.agents/skills/` with symlinks to each agent):
-```bash
-cd ~ && npx skills install github.com/Taigibun/taigibun-agent-skills
-```
-
-**Project-level** (available only in the current project — installs to `.agents/skills/`):
-```bash
-npx skills install github.com/Taigibun/taigibun-agent-skills
-```
-
-This works with Claude Code, Gemini CLI, Codex CLI, and other compatible agents.
 
 ## Workflow Example: Publishing a Taigi Book
 

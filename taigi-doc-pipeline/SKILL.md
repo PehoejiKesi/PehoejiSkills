@@ -1,6 +1,6 @@
 ---
 name: taigi-doc-pipeline
-description: Runs or sets up the five-stage Taigi document pipeline that turns legacy Microsoft Word .doc files of Taigi (Han-Lo / POJ) literature into fixed Unicode text, structured Markdown, a GenYoMin2 TW typeset .docx and a font-independent outlined PDF. Use this whenever the user wants to digitize, convert, batch-process or republish Taigi .doc or .txt sources, mentions NN_<title>_<descriptor> stage files (raw, fixed, structured, typeset, outlined) or doc_original / doc_result folders, or wants to run, re-run, extend or debug any of the stage 1–5 scripts. It is the orchestrator and names the taigi-* skill that owns each stage.
+description: "Runs or sets up the five-stage Taigi document pipeline that turns legacy Microsoft Word .doc files of Taigi (Han-Lo / POJ) literature into fixed Unicode text, structured Markdown, a GenYoMin2 TW typeset .docx and a font-independent outlined PDF. Use this whenever the user wants to digitize, convert, batch-process or republish Taigi .doc or .txt sources, mentions numbered stage stage files (raw, fixed, structured, typeset, outlined) or doc_original / doc_result folders, or wants to run, re-run, extend or debug any of the stage 1–5 scripts. It is the orchestrator and names the taigi-* skill that owns each stage."
 ---
 
 # Taigi Document Pipeline

@@ -4,4 +4,5 @@ node_modules/
 .skill
 dist/
 skills-lock.json
-.agents/
+.agents/*
+!.agents/skills/

@@ -1,6 +1,6 @@
 ---
 name: taigi-docx-typography-expert
-description: Controls line breaking and typography in Microsoft Word (OpenXML) documents for Taigi mixed-script text (Hanji + Roman Orthography): native non-breaking hyphens via <w:noBreakHyphen/>, East Asian kinsoku rules, run splitting, settings.xml element order, and the traps of custom line-break character lists. Use whenever POJ hyphens break at line ends, punctuation lands at the start of a line, or any OpenXML patching of a Taigi .docx is planned.
+description: "Controls line breaking and typography in Microsoft Word (OpenXML) documents for Taigi mixed-script text (Hanji + Roman Orthography): native non-breaking hyphens via w:noBreakHyphen, East Asian kinsoku rules, run splitting, settings.xml element order, and the traps of custom line-break character lists. Use whenever POJ hyphens break at line ends, punctuation lands at the start of a line, or any OpenXML patching of a Taigi .docx is planned."
 ---
 
 # Taigi DOCX Typography Expert
