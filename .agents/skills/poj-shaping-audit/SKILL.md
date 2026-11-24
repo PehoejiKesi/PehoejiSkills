@@ -22,6 +22,8 @@ Open the generated PNG. In another repository, use its equivalent shaping and sp
 
 > Chhù-piⁿ tńg--khì-o͘h, saⁿ-koan lóng hó-sè, kiⁿ-á-ji̍t chin hoaⁿ-hí!
 
+For tone 8, compare `i i̍ í ì î`, `I I̍ Í Ì Î` and `a a̍ á à â` in the same face at reading and display sizes. Check that the stroke is vertical, clears the base and sits within the family's native accent height band. Read `ji̍t` and `Mi̍h` in context to check the gap above i at normal size.
+
 ## Locate the failure
 
 - **Missing ink or unexpected style.** Check cmap coverage and glyph zero in the shaped output. In a browser or native app, inspect which face drew each run. A fallback font can disguise a missing character.

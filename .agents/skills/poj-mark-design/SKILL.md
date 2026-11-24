@@ -10,7 +10,7 @@ Start with the family's editable sources and normal build. Trace one working acc
 ## Draw from the family's own forms
 
 - **Dot above right (U+0358).** Start with the family's accent dot or i dot. Compare size and weight with its accents at reading size. Give the dot its own upper-right attachment on o and O so a centered tone can coexist with it. Test Ó͘ and Ō͘ against a following letter. Raising the dot above the entire accented outline can leave it floating.
-- **Vertical line above (U+030D).** Use the length, stroke contrast and terminals of the family's accents. Center the upright stroke optically over each vowel and syllabic nasal, including wide m and narrow i. Check capitals against existing capital accents.
+- **Vertical line above (U+030D).** Draw an upright stroke with parallel sides and terminals that match the family. Use the family's acute, grave and circumflex as references for stroke length and the top edge of the finished cluster. Aim for the same accent height band on lowercase and uppercase bases. On dotless i, keep enough space above the stem to distinguish the stroke from a tittle at reading size. Center it optically over both narrow i and wide m.
 - **Superscript n (U+207F).** Match the family's superior letters in height, stroke weight and sidebearings. Give ⁿ its own advance. Read piⁿ and saⁿ-koan to check spacing on both sides.
 
 ## Wire the marks into shaping
